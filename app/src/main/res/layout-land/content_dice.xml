@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:showIn="@layout/activity_main"
+        tools:showIn="@layout/activity_dice"
         tools:context=".MainActivity">
 
     <TextView
@@ -19,7 +19,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="@dimen/headline_margin"
             android:layout_marginBottom="@dimen/headline_margin"
-            android:textSize="@dimen/headline_text_size"/>
+            android:textSize="36sp"/>
 
     <ImageView
             android:id="@+id/die1"
@@ -30,7 +30,7 @@
             app:layout_constraintTop_toBottomOf="@+id/headline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/die2"
-            android:layout_marginTop="48dp"/>
+            android:layout_marginTop="@dimen/dice_vertical_margin"/>
 
     <ImageView
             android:id="@+id/die2"
@@ -38,9 +38,9 @@
             android:layout_height="@dimen/die_dimen"
             android:src="@drawable/die_2"
             android:contentDescription="@string/no_dice"
-            app:layout_constraintTop_toTopOf="@+id/die1"
             app:layout_constraintStart_toEndOf="@+id/die1"
-            app:layout_constraintEnd_toStartOf="@+id/die3"/>
+            app:layout_constraintEnd_toStartOf="@+id/die3"
+            app:layout_constraintTop_toTopOf="@+id/die1"/>
 
     <ImageView
             android:id="@+id/die3"
@@ -48,9 +48,9 @@
             android:layout_height="@dimen/die_dimen"
             android:src="@drawable/die_3"
             android:contentDescription="@string/no_dice"
-            app:layout_constraintTop_toTopOf="@+id/die2"
             app:layout_constraintStart_toEndOf="@+id/die2"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@+id/die4"
+            app:layout_constraintTop_toTopOf="@+id/die2"/>
 
     <ImageView
             android:id="@+id/die4"
@@ -58,10 +58,9 @@
             android:layout_height="@dimen/die_dimen"
             android:src="@drawable/die_4"
             android:contentDescription="@string/no_dice"
-            android:layout_marginTop="@dimen/dice_vertical_margin"
-            app:layout_constraintStart_toStartOf="@id/die1"
-            app:layout_constraintEnd_toEndOf="@+id/die2"
-            app:layout_constraintTop_toBottomOf="@+id/die1"/>
+            app:layout_constraintStart_toEndOf="@+id/die3"
+            app:layout_constraintEnd_toStartOf="@+id/die5"
+            app:layout_constraintTop_toTopOf="@+id/die3"/>
 
     <ImageView
             android:id="@+id/die5"
@@ -69,8 +68,8 @@
             android:layout_height="@dimen/die_dimen"
             android:src="@drawable/die_5"
             android:contentDescription="@string/no_dice"
-            app:layout_constraintTop_toTopOf="@+id/die4"
-            app:layout_constraintStart_toStartOf="@+id/die2"
-            app:layout_constraintEnd_toEndOf="@+id/die3"/>
+            app:layout_constraintStart_toEndOf="@+id/die4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/die4"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
